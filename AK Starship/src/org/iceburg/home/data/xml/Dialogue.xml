@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+type is translated into an int, see the static ints in the MessageCenter Class
+
+This is used because negative responses are 1 higher on the hashmap,
+making yes = false just tells the game to raise the type number 1
+
+This is useful because some game messages check whether the response should be positive or negative,
+so one static value typeDefaultResponse can be fetched along with the bool the game provides to
+give both a positive or negative response depending on the situation.
+
+
+**************************************************
+For types with a yes or no response, the no response is the second id, or odd number
+
+Types:
+0= typeDefaultResponse (yes)
+1= typeDefaultResponse (no)
+2= typeEngineerTileType
+4= typeWeaponsTargetable
+typeEquipWeapon = 6;
+typeSecurityDoorInfo = 8;
+typeSecurityDoorSetClose = 10;
+typeCanTravel = 12;
+typeCanTravelNo = 13;
+
+
+**************************************************
+-->
+<Dialogue>
+	<type id="0">
+		<yes>
+			<line>Yes sir!</line>
+			<line>Aye Captain!</line>
+		</yes>
+		<no>
+			<line>Can't do that captain!</line>
+			<line>Not possible, sir.</line>
+		</no>
+	</type>
+	<type id="2">
+		<yes>
+			<line>Aye Captain, that varString1 has a parent system!</line>
+			<line>Captain, that varString1 is part of the varString2 system!</line>
+			<line>That varString1 is connected to the varString2 system, sir.</line>
+		</yes>
+		<no>
+			<line>Captain, there is no parent system for that varString1!</line>
+			<line>That varString1 is not connected to any system, sir.</line>
+		</no>
+	</type>
+	<type id="4">
+		<yes>
+			<line>We can get a lock on that varString1.</line>
+			<line>Aye, we can hit them there!</line>
+			<line>Aye, we can target that varString1!</line>
+		</yes>
+		<no>
+			<line>I can't hit that varString1.</line>
+			<line>That area is too shielded, Captain.</line>
+			<line>I can't lock onto that varString1, sir.</line>
+		</no>
+	</type>
+	<type id="6">
+		<yes>
+			<line>equip weapon Line not written!</line>
+		</yes>
+		<no>
+			<line>equip weapon Line not written!</line>
+		</no>
+	</type>
+	<type id="8">
+		<yes>
+			<line>That varString1 is closed!</line>
+			<line>That varString1 shut tight Captain.</line>
+			<line>Sir, we have a seal on that varString1.</line>
+		</yes>
+		<no>
+			<line>That varString1 is open, sir.</line>
+			<line>Captain, that varString1 is wide open.</line>
+		</no>
+	</type>
+	<type id="10">
+		<yes>
+			<line>I've closed that varString1, sir.</line>
+			<line>The varString1 is now closed, Captain.</line>
+		</yes>
+		<no>
+			<line>I've opened that varString1, Captain.</line>
+			<line>The varString1 is now open, sir.</line>
+		</no>
+	</type>
+	<type id="12">
+		<yes>
+			<line>Heading to that varString1 now, sir.</line>
+			<line>Heading there now, Captain.</line>
+		</yes>
+		<no>
+			<line>I can't reach that varString1, Captain.</line>
+			<line>I don't know how to get to that varString1, sir.</line>
+		</no>
+	</type>
+	
+</Dialogue>	

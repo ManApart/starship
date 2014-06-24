@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+**************************************************
+Ideas:
+Atmosphere is what the race must have in order to breath
+Atmosphere Key:
+0 = none
+1= Oxygen
+2= H2O
+3= Nitrogen Dioxide
+Temperature?
+
+**************************************************
+-->
+
+<Races>
+	<Race id="race_human">
+		<raceName>Human</raceName>
+		<aggression>1</aggression>
+		<language>fonts/spacecrazyzone.ttf</language>
+		<healthTotal>100</healthTotal>
+		<energyFields>1</energyFields>
+		<navigation>1</navigation>
+		<biology>1</biology>
+		<analysis>1</analysis>
+		<powerDistribution>1</powerDistribution>
+		<diplomacy>3</diplomacy>
+		<repairSkill>1</repairSkill>
+		<combatSkill>1</combatSkill>
+		<hackingSkill>1</hackingSkill>
+		<description>An enterprising and diplomatic people, humans excel at trade and diplomacy. They also make really good ice cream.</description>
+		<name>Bob</name>
+		<name>Jill</name>
+		<name>Dan</name>
+		<name>Sue</name>
+		<name>Dave</name>
+		<name>Jim</name>
+		<name>Gus</name>
+		<name>Stanley</name>
+		<name>Margaret</name>
+		<name>Micheal</name>
+		<name>Stu</name>
+		<name>Philip</name>
+		<name>Robert</name>
+		<name>Gregory</name>
+		<name>Rudolph</name>
+		<name>Josh</name>
+		<name>Steven</name>
+		<name>Gilbert</name>
+		<name>Glive</name>
+	</Race>
+</Races>	

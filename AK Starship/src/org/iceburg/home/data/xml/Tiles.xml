@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Tiles>
+	<Tile>
+		<name>Space</name>
+		<blocked>false</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#000000</tileColor>
+	</Tile>
+	<Tile>
+		<name>Wall</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#8b8b8b</tileColor>
+	</Tile>
+	<Tile>
+		<name>Floor</name>
+		<blocked>false</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#ffffff</tileColor>
+	</Tile>
+	<Tile>
+		<name>Door</name>
+		<blocked>true</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#69452c</tileColor>
+	</Tile>
+	<Tile>
+		<name>Shield Generator</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#9dfffe</tileColor>
+	</Tile>
+	<Tile>
+		<name>Bio Bed</name>
+		<blocked>false</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#ff0000</tileColor>
+	</Tile>
+	<Tile>
+		<name>Med Console</name>
+		<blocked>false</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#700000</tileColor>
+	</Tile>
+	<Tile>
+		<name>Engine</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#983da5</tileColor>
+	</Tile>
+	<Tile>
+		<name>Helm</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#8bc676</tileColor>
+	</Tile>
+	<Tile>
+		<name>Sensor Array</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#1f3da5</tileColor>
+	</Tile>
+	<Tile>
+		<name>Atmosphere Recycler</name>
+		<blocked>true</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#aa76c6</tileColor>
+	</Tile>
+	<Tile>
+		<name>AC Vent</name>
+		<blocked>false</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#8476c6</tileColor>
+	</Tile>
+	<Tile>
+		<name>Beam Bank</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#ff3238</tileColor>
+	</Tile>
+	<Tile>
+		<name>Missile Bank</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#ff5c38</tileColor>
+	</Tile>
+	<Tile>
+		<name>Comm Array</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#d55c76</tileColor>
+	</Tile>
+	<Tile>
+		<name>Turbo Tube</name>
+		<blocked>false</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#ea5e00</tileColor>
+	</Tile>
+	<Tile>
+		<name>Warp Generator</name>
+		<blocked>true</blocked>
+		<airLevel>0</airLevel>
+		<tileColor>#29d025</tileColor>
+	</Tile>
+
+	<Tile>
+		<name>Cargo Bay</name>
+		<blocked>false</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#b5774c</tileColor>
+	</Tile>
+	<Tile>
+		<name>Crew Quarters</name>
+		<blocked>false</blocked>
+		<airLevel>100</airLevel>
+		<tileColor>#5323a5</tileColor>
+	</Tile>
+</Tiles>

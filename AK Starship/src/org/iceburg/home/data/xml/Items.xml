@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!-- 
+	**************************************************
+	For items with adjustable power levels, required power is the MAX power the item can take
+	**************************************************
+	-->	
+
+<Items>
+
+
+	<!-- 
+	**************************************************
+	Weapon Banks (Beam and Missile)
+	**************************************************
+	-->	
+	<Item id="beam_1">
+		<name>Basic Laser Bank</name>
+		<health>100</health>
+		<missleHealth>10</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>1</damage>
+		<arc>35</arc>
+		<frequency>0</frequency>
+		<image>textures/world/items/beamBank_1s.png</image>
+		<itemType>#ff3238</itemType>
+		<description>The most rudimentary laser bank available, this bank uses little energy but has trouble cutting through even the weakest hulls.</description>
+	</Item>
+	<Item id="beam_wide">
+		<name>Wide Beam Laser Bank</name>
+		<health>100</health>
+		<missleHealth>10</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>1</damage>
+		<arc>90</arc>
+		<frequency>0</frequency>
+		<image>textures/world/items/beamBank_1s.png</image>
+		<itemType>#ff3238</itemType>
+		<description>While it does little damage, it's wide arc allows it to do damage more often. Good against ships more agile than your own.</description>
+	</Item>
+	<Item id="beam_Focus">
+		<name>Focus Laser Bank</name>
+		<health>100</health>
+		<missleHealth>10</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>5</damage>
+		<arc>10</arc>
+		<frequency>0</frequency>
+		<image>textures/world/items/beamBank_1s.png</image>
+		<itemType>#ff3238</itemType>
+		<description>Massive damage if you can get within range.</description>
+	</Item>
+	<Item id="beam_2">
+		<name>Focus Laser Bank</name>
+		<health>100</health>
+		<missleHealth>10</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>2</damage>
+		<arc>30</arc>
+		<frequency>0</frequency>
+		<image>textures/world/items/beamBank_1s.png</image>
+		<itemType>#ff3238</itemType>
+		<description>An upgraded laser with a slightly smaller arc, but more damage potential.</description>
+	</Item>
+	<!-- **************************************************Missile Banks-->
+	<Item id="missile_1">
+		<name>Basic Missile Bank</name>
+		<health>100</health>
+		<missleHealth>10</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>10</damage>
+		<arc>32</arc>
+		<reloadTime>10</reloadTime>
+		<AOE>1</AOE>
+		<image>textures/world/items/missileBank_1s.png</image>
+		<itemType>#ff5c38</itemType>
+		<description>Launches rocked powered missiles.</description>
+	</Item>
+	<Item id="missile_2">
+		<name>Basic Missile Bank</name>
+		<health>150</health>
+		<missleHealth>10</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>15</damage>
+		<arc>30</arc>
+		<reloadTime>10</reloadTime>
+		<AOE>1</AOE>
+		<image>textures/world/items/missileBank_1s.png</image>
+		<itemType>#ff5c38</itemType>
+		<description>Launches rocked powered missiles.</description>
+	</Item>
+	<Item id="missile_Quick">
+		<name>Quick Missile Bank</name>
+		<health>50</health>
+		<missleHealth>10</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>10</damage>
+		<arc>32</arc>
+		<reloadTime>5</reloadTime>
+		<AOE>0</AOE>
+		<image>textures/world/items/missileBank_1s.png</image>
+		<itemType>#ff5c38</itemType>
+		<description>Quickly launches weak missiles.</description>
+	</Item>
+	<Item id="missile_AOE">
+		<name>Fogun Missile Bank</name>
+		<health>100</health>
+		<missleHealth>1</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>2</damage>
+		<arc>32</arc>
+		<reloadTime>2</reloadTime>
+		<AOE>4</AOE>
+		<image>textures/world/items/missileBank_1s.png</image>
+		<itemType>#ff5c38</itemType>
+		<description>Explodes on impact with a large, weak damage area.</description>
+	</Item>
+	<Item id="missile_Eagle">
+		<name>Eagle Missile Bank</name>
+		<health>200</health>
+		<missleHealth>101</missleHealth>
+		<powerMax>1</powerMax>
+		<damage>10</damage>
+		<arc>32</arc>
+		<reloadTime>8</reloadTime>
+		<AOE>0</AOE>
+		<image>textures/world/items/missileBank_1s.png</image>
+		<itemType>#ff5c38</itemType>
+		<description>Missile that pierces weak walls.</description>
+	</Item>
+
+	<!-- 
+	**************************************************
+	Floors, Walls, Doors
+	**************************************************
+	-->	
+	<Item id="floor_steel">
+		<name>Steel Floor</name>
+		<powerMax>0</powerMax>
+		<health>100</health>
+		<image>textures/world/items/floor_1s.png</image>
+		<itemType>#ffffff</itemType>
+		<description>A generic, weak floor.</description>
+	</Item>
+	<Item id="floor_titanium">
+		<name>Titanium Floor</name>
+		<powerMax>0</powerMax>
+		<health>200</health>
+		<image>textures/world/items/floor_1s.png</image>
+		<itemType>#ffffff</itemType>
+		<description>A durable floor.</description>
+	</Item>
+	<!-- **************************************************Walls-->
+	
+	<Item id="wall_steel">
+		<name>Steel Wall</name>
+		<powerMax>0</powerMax>
+		<health>100</health>
+		<image>textures/world/items/wall_1s.png</image>
+		<itemType>#8b8b8b</itemType>
+		<description>A bland, weak wall.</description>
+	</Item>
+	<Item id="wall_titanium">
+		<name>Titanium Wall</name>
+		<powerMax>0</powerMax>
+		<health>100</health>
+		<image>textures/world/items/wall_1s.png</image>
+		<itemType>#8b8b8b</itemType>
+		<description>A strong wall.</description>
+	</Item>
+	<!-- **************************************************Doors-->
+	<Item id="door_steel">
+		<name>Steel Door</name>
+		<powerMax>0</powerMax>
+		<health>50</health>
+		<var1>5</var1>
+		<image>textures/world/items/door_1.png</image>
+		<openImage>textures/world/items/door_1_open.png</openImage>
+		<itemType>#69452c</itemType>
+		<description>The weakest variety of door.</description>
+	</Item>
+	<Item id="door_titanium">
+		<name>Titanium Door</name>
+		<powerMax>0</powerMax>
+		<health>100</health>
+<!-- 		What is var1!? lol -->
+		<var1>5</var1>
+		<image>textures/world/items/door_1.png</image>
+		<openImage>textures/world/items/door_1_open.png</openImage>
+		<itemType>#69452c</itemType>
+		<description>A sturdy door.</description>
+	</Item>
+	<Item id="door_titarium">
+		<name>Titarium Door</name>
+		<powerMax>0</powerMax>
+		<health>150</health>
+<!-- 		What is var1!? lol -->
+		<var1>5</var1>
+		<image>textures/world/items/door_1.png</image>
+		<openImage>textures/world/items/door_1_open.png</openImage>
+		<itemType>#69452c</itemType>
+		<description>A very strong door.</description>
+	</Item>
+	
+	<!-- 
+	**************************************************
+	Shields
+	power required is max power
+	**************************************************
+	-->	
+	<Item id="shield_1">
+		<name>Basic Shield Generator</name>
+		<powerMax>2</powerMax>
+		<health>100</health>
+		<AOE>8</AOE>
+		<frequency>0</frequency>
+		<itemType>#9dfffe</itemType>
+		<image>textures/world/items/shieldGen_1.png</image>
+		<description>A weak shield generator.</description>
+	</Item>
+	<Item id="shieldWide_1">
+		<name>Large Shield Generator</name>
+		<powerMax>2</powerMax>
+		<health>50</health>
+		<AOE>16</AOE>
+		<frequency>0</frequency>
+		<itemType>#9dfffe</itemType>
+		<image>textures/world/items/shieldGen_1.png</image>
+		<description>A weak shield generator that covers a large area.</description>
+	</Item>
+	<Item id="shieldFocus_1">
+		<name>Focus Shield Generator</name>
+		<powerMax>2</powerMax>
+		<health>200</health>
+		<AOE>2</AOE>
+		<frequency>0</frequency>
+		<itemType>#9dfffe</itemType>
+		<image>textures/world/items/shieldGen_1.png</image>
+		<description>A focused shield generator that provides maximum protection for a small area.</description>
+	</Item>
+	<Item id="shield_2">
+		<name>Heavy Duty Shield Generator</name>
+		<powerMax>5</powerMax>
+		<health>100</health>
+		<AOE>5</AOE>
+		<frequency>0</frequency>
+		<itemType>#9dfffe</itemType>
+		<image>textures/world/items/shieldGen_1.png</image>
+		<description>A focused shield generator that provides maximum protection for a small area.</description>
+	</Item>
+	<Item id="shieldSleek_1">
+		<name>Sleek Shield Generator</name>
+		<powerMax>2</powerMax>
+		<health>200</health>
+		<AOE>6</AOE>
+		<frequency>0</frequency>
+		<itemType>#9dfffe</itemType>
+		<image>textures/world/items/shieldGen_1.png</image>
+		<description>Good energy efficiency</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Medbay / BioBeds
+	**************************************************
+	-->	
+	<Item id="MedConsole_1">
+		<name>Basic Med Console</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<healingRate>1</healingRate>
+		<itemType>#700000</itemType>
+		<image>textures/world/items/medConsole_1.png</image>
+		<description>This is going to hurt, a lot.</description>
+	</Item>
+	<Item id="MedConsole_2">
+		<name>Med Console</name>
+		<powerMax>3</powerMax>
+		<health>120</health>
+		<healingRate>1</healingRate>
+		<itemType>#700000</itemType>
+		<image>textures/world/items/medConsole_1.png</image>
+		<description>Use this to heal crew in med beds.</description>
+	</Item>
+	<Item id="MedConsole_3">
+		<name>Sleek Med Console</name>
+		<powerMax>2</powerMax>
+		<health>120</health>
+		<healingRate>2</healingRate>
+		<itemType>#700000</itemType>
+		<image>textures/world/items/medConsole_1.png</image>
+		<description>Heals twice as fast as other med consoles</description>
+	</Item>
+	<Item id="bed_1">
+		<name>Basic Bio Bed</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<crewHealth>120</crewHealth>
+		<itemType>#ff0000</itemType>
+		<image>textures/world/items/medBed_1.png</image>
+		<description>Pain is just weakness leaving the body...</description>
+	</Item>
+	<Item id="bed_2">
+		<name>Bio Bed</name>
+		<powerMax>2</powerMax>
+		<health>100</health>
+		<crewHealth>150</crewHealth>
+		<itemType>#ff0000</itemType>
+		<image>textures/world/items/medBed_1.png</image>
+		<description>It's not the lap of luxery, but it sure helps.</description>
+	</Item>
+	<Item id="bed_3">
+		<name>Advanced Bio Bed</name>
+		<powerMax>3</powerMax>
+		<health>100</health>
+		<crewHealth>150</crewHealth>
+		<itemType>#ff0000</itemType>
+		<image>textures/world/items/medBed_1.png</image>
+		<description>It's not the lap of luxery, but it sure helps.</description>
+	</Item>
+	<Item id="bed_4">
+		<name>Advanced Bio Bed</name>
+		<powerMax>4</powerMax>
+		<health>150</health>
+		<crewHealth>200</crewHealth>
+		<itemType>#ff0000</itemType>
+		<image>textures/world/items/medBed_1.png</image>
+		<description>The augments this bed can help install can literally double the crew's health.</description>
+	</Item>
+	<Item id="bedSleek">
+		<name>Sleek Bio Bed</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<crewHealth>150</crewHealth>
+		<itemType>#ff0000</itemType>
+		<image>textures/world/items/medBed_1.png</image>
+		<description>As good as an advanced bio bed, but uses 1/3 the energy.</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Engines
+	powerMax is not the power needed, but the power provided per engine
+	current power is power output
+	**************************************************
+	-->	
+	<Item id="engine_1">
+		<name>Sub-Atomic Engine</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<image>textures/world/items/engine_1.png</image>
+		<itemType>#983da5</itemType>
+		<description>This and a battery will power a system...</description>
+	</Item>
+	<Item id="engine_2">
+		<name>Atomic Engine</name>
+		<powerMax>2</powerMax>
+		<health>120</health>
+		<image>textures/world/items/engine_1.png</image>
+		<itemType>#983da5</itemType>
+		<description>Provides basic system power.</description>
+	</Item>
+	<Item id="engine_3">
+		<name>Gamble Engine</name>
+		<powerMax>4</powerMax>
+		<health>60</health>
+		<image>textures/world/items/engine_1.png</image>
+		<itemType>#983da5</itemType>
+		<description>Low health, but great power output.</description>
+	</Item>
+	<Item id="engine_4">
+		<name>Photon Engine</name>
+		<powerMax>4</powerMax>
+		<health>160</health>
+		<image>textures/world/items/engine_1.png</image>
+		<itemType>#983da5</itemType>
+		<description>By deconstructing photons, this engine provides a good amount of power.</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Helm
+	**************************************************
+	-->	
+	<Item id="helm_1">
+		<name>Retro Helm</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<turnSpeed>1</turnSpeed>
+		<itemType>#8bc676</itemType>
+		<image>textures/world/items/helm_1.png</image>
+		<description>I think I remember how to use one of these...</description>
+	</Item>
+	<Item id="helm_2">
+		<name>Helm</name>
+		<powerMax>2</powerMax>
+		<health>100</health>
+		<turnSpeed>2</turnSpeed>
+		<itemType>#8bc676</itemType>
+		<image>textures/world/items/helm_1.png</image>
+		<description>Standard helm.</description>
+	</Item>
+	<Item id="helm_3">
+		<name>Heavy Duty Helm</name>
+		<powerMax>5</powerMax>
+		<health>100</health>
+		<turnSpeed>2</turnSpeed>
+		<itemType>#8bc676</itemType>
+		<image>textures/world/items/helm_1.png</image>
+		<description>Given enough energy, this thing can really turn.</description>
+	</Item>
+	<Item id="helmSleek">
+		<name>Sleek Helm</name>
+		<powerMax>2</powerMax>
+		<health>100</health>
+		<turnSpeed>4</turnSpeed>
+		<itemType>#8bc676</itemType>
+		<image>textures/world/items/helm_1.png</image>
+		<description>Really good energy efficiency.</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Warp Generators
+	**************************************************
+	-->	
+	<Item id="warpGen_1">
+		<name>Simple Warp Generator</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<speed>1</speed>
+		<itemType>#29d025</itemType>
+		<image>textures/world/items/warp_1.png</image>
+		<description>We'll get there before we die of old age... I promise.</description>
+	</Item>
+	<Item id="warpGen_2">
+		<name>Warp Generator</name>
+		<powerMax>2</powerMax>
+		<health>100</health>
+		<speed>1</speed>
+		<itemType>#29d025</itemType>
+		<image>textures/world/items/warp_1.png</image>
+		<description>Why use two simple warp generators when you can use one of these?</description>
+	</Item>
+	<Item id="warpGen_3">
+		<name>Heavy Duty Warp Generator</name>
+		<powerMax>5</powerMax>
+		<health>200</health>
+		<speed>1</speed>
+		<itemType>#29d025</itemType>
+		<image>textures/world/items/warp_1.png</image>
+		<description>Save space, not energy.</description>
+	</Item>
+	<Item id="warpGen_4">
+		<name>Sleek Warp Generator</name>
+		<powerMax>1</powerMax>
+		<health>120</health>
+		<speed>2</speed>
+		<itemType>#29d025</itemType>
+		<image>textures/world/items/warp_1.png</image>
+		<description>Energy efficient.</description>
+	</Item>
+	<Item id="warpGen_4">
+		<name>Sleek Warp Generator</name>
+		<powerMax>2</powerMax>
+		<health>90</health>
+		<speed>3</speed>
+		<itemType>#29d025</itemType>
+		<image>textures/world/items/warp_1.png</image>
+		<description>Quite energy efficient.</description>
+	</Item>
+	<Item id="warpGen_5">
+		<name>Sensitive Warp Generator</name>
+		<powerMax>3</powerMax>
+		<health>30</health>
+		<speed>4</speed>
+		<itemType>#29d025</itemType>
+		<image>textures/world/items/warp_1.png</image>
+		<description>Really energy efficient; highly unstable.</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Sensors
+	**************************************************
+	-->	
+	<Item id="sensors_1">
+		<name>Radar Sensors</name>
+		<powerMax>2</powerMax>
+		<level>1</level>
+		<health>100</health>
+		<itemType>#1f3da5</itemType>
+		<image>textures/world/items/sensors_1.png</image>
+		<description>I didn't realize tech like this was still in use.</description>
+	</Item>
+	<Item id="sensors_2">
+		<name>Radian Sensors</name>
+		<powerMax>2</powerMax>
+		<level>2</level>
+		<health>100</health>
+		<itemType>#1f3da5</itemType>
+		<image>textures/world/items/sensors_1.png</image>
+		<description>Standard Scanner.</description>
+	</Item>
+	<Item id="sensors_3">
+		<name>Graviton Sensors</name>
+		<powerMax>4</powerMax>
+		<level>1</level>
+		<health>100</health>
+		<itemType>#1f3da5</itemType>
+		<image>textures/world/items/sensors_1.png</image>
+		<description>Uses brute power to provide hi fidelity images.</description>
+	</Item>
+	<Item id="sensors_4">
+		<name>String Sensors</name>
+		<powerMax>3</powerMax>
+		<level>2</level>
+		<health>100</health>
+		<itemType>#1f3da5</itemType>
+		<image>textures/world/items/sensors_1.png</image>
+		<description>Uses string trails to provide accurate images without draining power.</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Comms
+	**************************************************
+	-->	
+	<Item id="comm_1">
+		<name>Radio Comms</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<itemType>#d55c76</itemType>
+		<image>textures/world/items/comms_1.png</image>
+		<description>Sublight!? It'd be faster to communicate by traveling there!</description>
+	</Item>
+	<Item id="comm_2">
+		<name>Comms</name>
+		<powerMax>1</powerMax>
+		<health>150</health>
+		<itemType>#d55c76</itemType>
+		<image>textures/world/items/comms_1.png</image>
+		<description>Standard Comms</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Turbo Tube
+	**************************************************
+	-->	
+	<Item id="turboTube_1">
+		<name>Turbo Tube</name>
+		<powerMax>1</powerMax>
+		<health>100</health>
+		<itemType>#ea5e00</itemType>
+		<image>textures/world/items/turboTube_1.png</image>
+		<description>Hey, it's better than using those teleporter things they want us to use.</description>
+	</Item>
+	<Item id="turboTube_2">
+		<name>Heavy Turbo Tube</name>
+		<powerMax>1</powerMax>
+		<health>150</health>
+		<itemType>#ea5e00</itemType>
+		<image>textures/world/items/turboTube_1.png</image>
+		<description>Hey, it's better than using those teleporter things they want us to use.</description>
+	</Item>
+	<!--
+	**************************************************
+	Atmosphere Gen/vents
+	power required is maximum convert rate
+	for vents power required is max drainrate
+	**************************************************
+	-->	
+	<Item id="acGen_1">
+		<name>Small Atmosphere Generator</name>
+		<powerMax>1</powerMax>
+		<health>60</health>
+		<capacity>100</capacity>
+		<itemType>#aa76c6</itemType>
+		<image>textures/world/items/atmoGen_1.png</image>
+		<description>Don't hold your breath... we may need it later.</description>
+	</Item>
+	<Item id="acGen_2">
+		<name>Atmosphere Generator</name>
+		<powerMax>2</powerMax>
+		<health>100</health>
+		<capacity>100</capacity>
+		<itemType>#aa76c6</itemType>
+		<image>textures/world/items/atmoGen_1.png</image>
+		<description>You can't live without atmosphere generators!</description>
+	</Item>
+	<Item id="acGen_3">
+		<name>Heavy Duty Atmosphere Generator</name>
+		<powerMax>4</powerMax>
+		<health>200</health>
+		<capacity>100</capacity>
+		<itemType>#aa76c6</itemType>
+		<image>textures/world/items/atmoGen_1.png</image>
+		<description>I feel safer with things like this on board.</description>
+	</Item>
+	<Item id="acVent_1">
+		<name>Plastic Atmosphere Vent</name>
+		<powerMax>0</powerMax>
+		<drainRate>1</drainRate>
+		<health>50</health>
+		<image>textures/world/items/vent_1s.png</image>
+		<itemType>#8476c6</itemType>
+		<description>My grandma had vent's on her merchant ship that looked just like this!</description>
+	</Item>
+	<Item id="acVent_2">
+		<name>Atmosphere Vent</name>
+		<powerMax>0</powerMax>
+		<drainRate>2</drainRate>
+		<health>100</health>
+		<image>textures/world/items/vent_1s.png</image>
+		<itemType>#8476c6</itemType>
+		<description>Standard Vents.</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Crew Quarters
+	**************************************************
+	-->	
+	<Item id="cabin_1">
+		<name>Rustic Cabin</name>
+		<maxCrew>1</maxCrew>
+		<powerMax>0</powerMax>
+		<health>100</health>
+		<itemType>#5323a5</itemType>
+		<image>textures/world/items/cabin_1.png</image>
+		<description>"Rustic," now there's advertising for you.</description>
+	</Item>
+	<Item id="cabin_2">
+		<name>Crew Cabin</name>
+		<maxCrew>2</maxCrew>
+		<powerMax>0</powerMax>
+		<health>130</health>
+		<itemType>#5323a5</itemType>
+		<image>textures/world/items/cabin_1.png</image>
+		<description>A nice little cabin, I'd say!</description>
+	</Item>
+	<!-- 
+	**************************************************
+	Cargo Bay
+	**************************************************
+	-->	
+	<Item id="cargo_1">
+		<name>Basic Cargo Hold</name>
+		<capacity>2</capacity>
+		<powerMax>0</powerMax>
+		<health>100</health>
+		<itemType>#b5774c</itemType>
+		<image>textures/world/items/Cargo_1.png</image>
+		<description>Please don't jostle anything!</description>
+	</Item>
+	<Item id="cargo_2">
+	<name>Cargo Hold</name>
+		<capacity>4</capacity>
+		<powerMax>0</powerMax>
+		<health>120</health>
+		<itemType>#b5774c</itemType>
+		<image>textures/world/items/Cargo_1.png</image>
+		<description>Good storage!</description>
+	</Item>
+	<Item id="cargo_3">
+	<name>Roomy Cargo Hold</name>
+		<capacity>8</capacity>
+		<powerMax>0</powerMax>
+		<health>150</health>
+		<itemType>#b5774c</itemType>
+		<image>textures/world/items/Cargo_1.png</image>
+		<description>Great storage!</description>
+	</Item>
+	<Item id="cargo_4">
+	<name>Large Cargo Hold</name>
+		<capacity>10</capacity>
+		<powerMax>0</powerMax>
+		<health>200</health>
+		<itemType>#b5774c</itemType>
+		<image>textures/world/items/Cargo_1.png</image>
+		<description>Wonderful storage!</description>
+	</Item>
+
+</Items>
+

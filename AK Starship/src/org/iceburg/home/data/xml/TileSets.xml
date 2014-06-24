@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+**************************************************
+This is for matching items to tiles for things like creating a new ship.
+The parser will read the items of a tile set, where the item's id (color/tile type)
+matchs the tile, the parser will add the item to that tile
+
+**************************************************
+-->
+
+<TileSets>
+	<tileSet id="ship_standard">
+		<item id="#8b8b8b">wall_steel</item>
+		<item id="#ffffff">floor_steel</item>
+		<item id="#69452c">door_steel</item>
+		<item id="#35ed27">console_1</item>
+		<item id="#9dfffe">shield_1</item>
+		<item id="#ff0000">bed_1</item>
+		<item id="#700000">MedConsole_1</item>
+		<item id="#983da5">engine_1</item>
+		<item id="#8bc676">helm_1</item>
+		<item id="#1f3da5">sensors_1</item>
+		<item id="#aa76c6">acGen_1</item>
+		<item id="#8476c6">acVent_1</item>
+		<item id="#ff3238">beam_1</item>
+		<item id="#ff5c38">missile_1</item>
+		<item id="#d55c76">comm_1</item>
+		<item id="#ea5e00">turboTube_1</item>
+		<item id="#29d025">warpGen_1</item>
+		<item id="#b5774c">cargo_1</item>
+		<item id="#5323a5">cabin_1</item>
+	</tileSet>
+	<tileSet id="ship_1">
+		<item id="#8b8b8b">wall_steel</item>
+		<item id="#ffffff">floor_titanium</item>
+		<item id="#69452c">door_steel</item>
+		<item id="#35ed27">console_1</item>
+		<item id="#9dfffe">shield_1</item>
+		<item id="#ff0000">bed_1</item>
+		<item id="#700000">MedConsole_1</item>
+		<item id="#983da5">engine_1</item>
+		<item id="#8bc676">helm_1</item>
+		<item id="#1f3da5">sensors_1</item>
+		<item id="#aa76c6">acGen_1</item>
+		<item id="#8476c6">acVent_1</item>
+		<item id="#ff3238">beam_1</item>
+		<item id="#ff5c38">missile_1</item>
+		<item id="#d55c76">comm_1</item>
+		<item id="#ea5e00">turboTube_1</item>
+		<item id="#29d025">warpGen_1</item>
+		<item id="#b5774c">cargo_1</item>
+		<item id="#5323a5">cabin_1</item>
+	</tileSet>
+	<tileSet id="ship_sleek">
+		<item id="#8b8b8b">wall_titanium</item>
+		<item id="#ffffff">floor_titanium</item>
+		<item id="#69452c">door_titarium</item>
+		<item id="#35ed27">console_1</item>
+		<item id="#9dfffe">shieldSleek_1</item>
+		<item id="#ff0000">bedSleek</item>
+		<item id="#700000">MedConsole_3</item>
+		<item id="#983da5">engine_4</item>
+		<item id="#8bc676">helmSleek</item>
+		<item id="#1f3da5">sensors_4</item>
+		<item id="#aa76c6">acGen_3</item>
+		<item id="#8476c6">acVent_2</item>
+		<item id="#ff3238">beam_2</item>
+		<item id="#ff5c38">missile_2</item>
+		<item id="#d55c76">comm_2</item>
+		<item id="#ea5e00">turboTube_2</item>
+		<item id="#29d025">warpGen_5</item>
+		<item id="#b5774c">cargo_4</item>
+		<item id="#5323a5">cabin_2</item>
+	</tileSet>
+	<tileSet id="ISV_Shard">
+	    <base>Voyager</base>
+	    <item id="#29d025">warpGen_2</item>
+	    <item id="#9dfffe">shield_2</item>
+	     <item id="#ff5c38">missile_2</item>
+	</tileSet>
+	<tileSet id="Ring">
+	    <base>Butterfly</base>
+	    <item id="#ff5c38">missile_Eagle</item>
+	    <item id="#aa76c6">acGen_3</item>
+	</tileSet>
+	<tileSet id="Butterfly">
+	    <base>ship_standard</base>
+	    <item id="#ff3238">beam_Focus</item>
+	    <item id="#9dfffe">shieldWide_1</item>
+	    <item id="#29d025">warpGen_2</item>
+	    <item id="#983da5">engine_3</item>
+	    <item id="#8b8b8b">wall_titanium</item>
+	    
+	</tileSet>
+	<tileSet id="Spear">
+	    <base>ship_sleek</base>
+	    
+	</tileSet>
+	<tileSet id="chelseaMonster">
+	    <base>ship_standard</base>
+	    <item id="#8b8b8b">wall_titanium</item>
+		<item id="#ffffff">"floor_titanium"</item>
+		<item id="#69452c">door_titanium</item>
+	</tileSet>
+	<tileSet id="PreyBird">
+	    <base>ship_standard</base>
+	    <item id="#ff3238">beam_wide</item>
+		<item id="#ff5c38">missile_Quick</item>
+		<item id="#b5774c">cargo_2</item>
+	</tileSet>
+	<tileSet id="Voyager">
+	    <base>ship_standard</base>
+	    <item id="#9dfffe">shieldWide_1</item>
+	    <item id="#ff3238">beam_Focus</item>
+	    <item id="#983da5">engine_2</item>
+	    <item id="#8bc676">helm_2</item>
+	    <item id="#ff5c38">missile_AOE</item>
+	    <item id="#ff0000">bed_2</item>
+	    <item id="#700000">MedConsole_2</item>
+	    <item id="#aa76c6">acGen_2</item>
+	</tileSet>
+	<tileSet id="Hive">
+	    <base>ship_1</base>
+	    <item id="#9dfffe">shieldFocus_1</item>
+	    <item id="#ff3238">beam_Focus</item>
+		<item id="#ff5c38">missile_Quick</item>
+		<item id="#29d025">warpGen_2</item>
+		<item id="#8bc676">helm_2</item>
+		<item id="#983da5">engine_2</item>
+		<item id="#8b8b8b">wall_steel</item>
+		<item id="#ffffff">floor_titanium</item>
+		<item id="#69452c">door_titanium</item>
+	</tileSet>
+</TileSets>

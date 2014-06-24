@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Quests>
+	<!-- <Quest id="startQuest"> -->
+	<!-- <title>Test Mission</title> -->
+	<!-- <event>eventShardNow</event> -->
+	<!-- <event>eventStart</event> -->
+	<!-- </Quest> -->
+	<Quest id="testQuest">
+		<title>Test Mission</title>
+		<event>eventTest</event>
+<!-- 		<event>eventFailureTest</event> -->
+		<!-- <event>eventDefaultStart</event> -->
+		<!-- <event>eventTutStart</event> -->
+<!-- 		<event>eventTutWeap</event> -->
+
+	</Quest>
+	<Quest id="tutorialQuest">
+		<title>The Basics</title>
+		<event>eventTutStart</event>
+		<event>eventTutWeap</event>
+		<event>eventTutCargo1</event>
+		<event>eventTutCargo2</event>
+		<event>eventStartOspreyQuest</event>
+	</Quest>
+	<Quest id="ospreyQuest">
+		<title>Encounter at Osprey Outpost</title>
+		<event>eventOspreyStart</event>
+	</Quest>
+
+
+</Quests>

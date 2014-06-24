@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Overview 
+
+*** 
+Events include location, unlock (unlock ship for profile), 
+addcrew (subtag for each <crew> as in ships.xml), addItem (multiple subtag <item>), and preText events. 
+
+Only one of each type can occur in each event (can't have two preText tags in one event, would need to make 2 events) 
+
+Location tags create a random location, then any location trait can be overridden 
+Locations can include ships If a location includes no distance/time, then the location is automatically placed over the old location. 
+	Otherwise the 	player must jump to warp until distance = 0, where a new location will spawn. 	
+	Ships can include crew (always enemy), if they do they replace ship default crew (see ships.xml for vars) 
+	Crew added through addCrew events are always friendly Any vars under Location can override random battle location vars 	(see battleLocations.xml for vars) 
+	Time and distance are stored in the quest when the event prior to that location is run 
+	//TODO add 2 option events and startquest events, move ship outside of location parsing. 
+	Quest Event Order: 	prepreText, sound, gen location, arrive location, arrive preText, fin battle, unlock ship, add crew, add item, start quest 
+	Tags after location can have a "fail" attribute. Just type the tag followed by F (Ex: arriveTextF, crewF). 	
+	(No need for addCrewF/ addItemF, just crewF) 
+	If the event had a location with a time, and the player did not arrive in time, only fail events will 
+	be processed. (Otherwise process events without fail attribute) 
+	
+	arrivetextW and posttextW play on event success,  arrivetextf and posttextf on fail, and arrivetext and posttext play regardless (after the w or f play)
+	
+	-->
+
+<Events>
+	<!-- ****************************Test Events**************************** -->
+	<Event id="eventDefaultStart">
+		<location>
+			<name>Home Base</name>
+		</location>
+	</Event>
+	<Event id="eventTest">
+		<location>
+			<name>Home Base</name>
+<!-- 			<ship id="ISV_Shard"></ship> -->
+<!-- 			<ship id="HSV_Sol"></ship> -->
+			<ship id="target"></ship>
+<!-- 			<ship id="Spear"></ship> -->
+<!-- 			<ship id="chelseaMonster"></ship> -->
+<!-- 			<ship id="Butterfly"></ship> -->
+<!-- 			<ship id="Hive"></ship> -->
+<!-- 			<ship id="PreyBird"></ship> -->
+<!-- 			<ship id="Ring"></ship> -->
+<!-- 			<ship id="Voyager"></ship> -->
+		</location>
+
+	</Event>
+	<Event id="eventFailureTest">
+		<location dist="1" time="1">
+			<name>Home Base</name>
+		</location>
+		<preText>Pretext, you can't get there fast enough!</preText>
+		<arriveTextW>You did the impossible and arrived on time!</arriveTextW>
+		<arriveTextF>Hah, told you you couldn't get here before me!
+		</arriveTextF>
+	</Event>
+	<Event id="eventStart">
+		<location>
+			<name>Home Base</name>
+		</location>
+		<preText>Quick! A pirate is on route to attack New Dawn! Get there
+			before he does to stop him!
+		</preText>
+	</Event>
+	<Event id="eventNewLoc">
+		<location></location>
+		<!-- <sound>fx/Crazy Mike.wav</sound> -->
+	</Event>
+
+	<!-- ****************************Tutorial Quest Events**************************** -->
+	<Event id="eventTutStart">
+		<location>
+			<name>Home Base</name>
+		</location>
+		<addCrew>
+			<crew>
+				<name>First Mate Austin</name>
+				<division>Science</division>
+			</crew>
+		</addCrew>
+		<preText>First Mate Austin: It's good to finally see you in the
+			captains chair!
+		</preText>
+		<preText>The viewscreen has changed quite a bit while you've been in
+			the field. So let me bring you up to speed.</preText>
+		<preText>Circles represent crew, and each piece of the ship is
+			represented by a tile.</preText>
+		<preText>Left clicking a tile will select the tile or crewman, and
+			give you more info. </preText>
+		<preText>Right clicking allows you to order crewmen.</preText>
+		<preText>Scroll or drag the mouse to zoom and pan.</preText>
+
+	</Event>
+
+	<Event id="eventTutWeap">
+		<location dist="1" time="1:32">
+			<name>Alignment Field</name>
+			<ship id="target"></ship>
+		</location>
+		<preText>To make sure screen calibration is working, send a crewman to
+			man and power on the helm. Try jumping to warp and traveling to the
+			weapon alignment field. Check the comms to see how far away you are.
+		</preText>
+		<preText>Don't forget to power your warp engines and set a speed!
+		</preText>
+		<arriveTextW>Wow, you got here fast! (I don't say that to just anyone.)
+			Next, let's focus on weapons.
+		</arriveTextW>
+		<arriveTextF>You made it! Next, let's focus on weapons.</arriveTextF>
+		<arriveText>We've set up a hologram inside a cargo crate.</arriveText>
+		<arriveText>To defeat him, you'll need to blast the ship with your
+			weapons untill it drains of oxygen.</arriveText>
+		<arriveText>Use your helm to face him</arriveText>
+		<arriveText>Man and power your weapons. You can set a selected weapon's
+			target by viewing the target ship and right clicking.</arriveText>
+		<arriveText>Hit oxygen generators to make sure oxygen isn't replenished.
+		</arriveText>
+		<arriveText>Don't forget to power up your sensors to get a better view!
+		</arriveText>
+		<postText>That looks like the last of him! Now that the battle is
+			over, why not use the airlocks to loot any good equipment you can
+			find?
+		</postText>
+		<postText>Hold on! I'm getting a message on the comms, it looks like we're wanted back at base!</postText>
+		<postText>These comms are usually very time sensative, and
+			it's important that we get to their location before the deadline!
+			(Check the comms to see how much time we have)</postText>
+		<postText>Funny how often this happens, it looks like you'll have to
+			choose how long to spend looting before you set out to the next
+			location.</postText>
+
+
+	</Event>
+
+	<Event id="eventTutCargo1">
+		<location dist="1" time="2:32">
+			<name>Home Base</name>
+		</location>
+		<arriveTextW>Old Friend: Hey Captain, I just got a shipment of building
+			materials and thought you could use them!</arriveTextW>
+		<arriveTextF>Captain, I hailed you because I had a recieved a shipment
+			of building materials, but unfortunatly a customer has already
+			purchased them.</arriveTextF>
+		<addItem>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>floor_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+			<item>wall_steel</item>
+		</addItem>
+	</Event>
+	<Event id="eventTutCargo2">
+		<preText>Why not customize your ship a bit before heading out into
+			open space? While you can customize your ship in battle, it's a lot
+			easier and faster to do it when no one is attacking you.</preText>
+		<preText>If not in battle, manning a cargo bay will allow you to
+			immediatly store any tile on your ship.</preText>
+		<preText>You can then use the cargobay to select the tile you want,
+			and place it anywhere on the ship!</preText>
+		<preText>Note that items must be placed on floor tiles, and floor
+			tiles can only be placed in space adjacent to your ship!</preText>
+		<preText>When your ready, let's jump to open space.</preText>
+		<location dist="1">
+			<name>Open Space</name>
+		</location>
+		<arriveText>Captain! I'm getting a distress signal! I'll patch it
+			through.</arriveText>
+		<quest>ospreyQuest</quest>
+
+	</Event>
+	
+	<!-- ****************************Osprey OutPost Events**************************** -->
+	<Event id="eventOspreyStart">
+	    <preText>Automated Distress Signal: Mayday, mayday. All available ships, immediate assistance required.</preText>
+		<location dist="1" time="2:32">
+			<name>Osprey Outpost</name>
+		</location>
+		<arriveTextF>You arrive at Osprey Outpost, a small federation outpost on the edge of Talaxian space. The damage to the station is obvious. Cargo and wreckage bounces off your hull as your aproach the base. No one answers your hails, and malfunctioning systems send energy signals that distort your lifesign sensors.</arriveTextF>
+		<arriveTextF>As you near the spacestation you realize the extent of the damage. The hull has completely depressurized, and you realize that whoever survived the attack has since secumb to asphixiation.</arriveTextF>
+		<arriveTextF>You download what data you can salvage from the main computer.</arriveTextF>
+		
+		<arriveTextW>You arrive at Osprey Outpost, a small federation outpost on the edge of Talaxian space. The damage to the station is obvious. Cargo and wreckage bounces off your hull as your aproach the base. No one answers your hails, and malfunctioning systems send energy signals that distort your lifesign sensors.</arriveTextW>
+		<arriveTextW>As you near the spacestation you realize the extent of the damage. The hull is riddled with gaping holes. A weak comms signal comes from deep inside the station.</arriveTextW>
+		<arriveTextW>Lt. Wilson: Captain, thank goodness you've come. We've suffered heavy casualties. I've moved the survivers into medbay, but we're quickly losing atmosphere.</arriveTextW>
+		<arriveTextW>You quickly load the survivers onto your ship, shuttling them to the planet. You contact a civilian tansport to pick them up and return them to their homes.</arriveTextW>
+		<arriveTextW>Lt. Wilson aproachs you with a data pad.
+		    Lt. Wilson: Captain, here's all the info we were able to get on the attacking ship. With your permission I'd like to help you track them down.</arriveTextW>
+		<arriveTextW>You take the data pad and consider your options.</arriveTextW>
+		<addCrew>
+		    <crew>
+		        <name>Lt. Wilson</name>
+		        <base>1</base>
+		    </crew>
+		</addCrew>
+		<postText>When the station's data has been processed, you forward it to your commanding officer back at home base.</postText>
+	</Event>
+	<Event id="eventOsprey2">
+	    <preText>Admrial Powell: Captain, the situation looks grim. Return to base so we can retrofit your ship.</preText>
+		<location dist="1">
+			<name>Home Base</name>
+		</location>
+		<arriveText>Admrial Powell: Captain, I'm giving you some atmosphere generators, a sensor array, an engine, and an experimental weapon science division has been working on.</arriveText>
+		<addItem>
+		    <item>missile_2</item>
+		    <item>engine_1</item>
+		    <item>sensors_1</item>
+		    <item>acGen_1</item>
+		    <item>acGen_1</item>
+		    <item>acGen_1</item>
+		</addItem>
+		<postText>After the new equipment has been loaded into your cargo bays, Admrial Powell contacts you again:
+		    As I've stated, we've got bad news: The insignia on the attacking ship matches the description of a marauding vessel that's been responsible for a number of attacks recently.</postText>
+	</Event>
+	<Event id="eventOsprey3">
+	    <preText>I'm sending you to Arnon 5. There is an investigator that has been following this case and may prove useful.</preText>
+		<location dist="1">
+			<name>Arnon 5</name>
+			<ship>Hive</ship>
+		</location>
+		<arriveText>As you jump out of warp, your sensors light up. Someone is attacking the planet!</arriveText>
+		<addCrew>
+		    <crew>
+		        <name>Investigator Scott</name>
+		        <base>2</base>
+		    </crew>
+		</addCrew>
+		<postText>After the battle, you hail the planet. Investigator Scott comes aboard and explains the situation</postText>
+		<postText>Scott: I've been following this case for four years. Piracy has been increaseing in this sector for some time, but only recently has it become so... organized.</postText>
+		<postText>Scott glances to the side and grimly chuckles before continuing.
+		    Scott: It's my opinion that the pirates have begun mobalizing behind a central figure, and I've been working to figure out who that is.</postText>
+	</Event>
+	<Event id="eventOspreyStacia">
+	    <preText>Your conversation is cut short when an urgent hail lights up your comms panel.</preText>
+	    <preText>Comms: Captain, we're under attack and require immediate assistance!</preText>
+		<location dist="1" time="2:32">
+		    <ship>Voyager</ship>
+		</location>
+		<arriveText>A small science vessel is under attack by another pirate!</arriveText>
+		<postTextW>Dr. Sherry: You've saved a lot of lives today, Captain. If you could use a medic, I'd be happy to join your crew.
+		</postTextW>
+		<postTextF>Dr. Sherry: Thank you for your assistance, Captain. If only you were able to have gotten here sooner... But I can't think like that, I need to tend to the wounded.</postTextF>
+		<addCrew>
+			<crew>
+				<name>Dr. Sherry</name>
+				<division>Science</division>
+				<base>3</base>
+			</crew>
+		</addCrew>
+	</Event>
+	<Event id="eventOsprey4">
+	    <preText>Scott: Captain, the pirates seem focused in quadrent 4, near Eln. I recommend we investigate.</preText>
+		<location dist="1" >
+		    <ship>PreyBird</ship>
+		</location>
+		<postText>After the battle, Investigator Scott aproaches you. Standing in your personal space, he speaks in a whisper.
+		    Scott: Captain, I've discoverd what seems to be an information exchange, I think we should head there next.</postText>
+	</Event>
+	<Event id="eventOsprey5">
+		<location dist="1" >
+		    <ship>chelseaMonster</ship>
+		</location>
+		<arriveText>As you arrive at the location, proximity sensor detect an unkown life form. It's a space monster!</arriveText>
+		<postText>You aproach the exchange point. A space rogue appears on your viewscreen. You start to interrigate her, and she motions to cut off signal and power her weapons, but then Investigator Scott speaks to her in a tongue you don't understand.</postText>
+		<postText>She laughs: Why didn't you say that in the first place. And cuts the viewscreen. Scott explains.
+		    Scott: She's been recently wronged by the pirates too. She's skilled in weapons and willing to join our crew.</postText>
+		    <addCrew>
+		        <crew>
+		            <name>Kalen</name>
+		            <base>2</base>
+		            <Navigation>6</Navigation>
+		        </crew>
+		    </addCrew>
+		
+	</Event>
+	<Event id="eventOsprey6">
+	    <preText>With the space rogue's new information, you discover the location of the space pirate's leader.</preText>
+		<location dist="1" >
+		</location>
+	</Event>
+	<Event id="eventOsprey7">
+	    <preText>Your viewscreen lights up with the face of a crazed man, a black eye patch covering his right eye. As if to make up for the lack of light, his left eye flits across the room, stretched wide as if in suprise.</preText>
+	    <preText>Crazy Mike: Think you can stop me, eh! First you'll need to get past my 3 best mates!</preText>
+		<sound>fx/Bad Mike.wav</sound>
+		<postText>He jumps to warp, but you can follow his signal</postText>
+	</Event>
+	<Event id="eventOspreyBoss1">
+	   <location dist="1" >
+		    <ship>ISV_Shard</ship>
+		</location>
+		<arriveText>The first boss!</arriveText>
+		<sound>fx/Bad Mike.wav</sound>
+		<postText>You prepare to jump to warp!</postText>
+	</Event>
+	<Event id="eventOspreyBoss2">
+	   <location dist="1" >
+		    <ship>Butterfly</ship>
+		</location>
+		<arriveText>The second boss!</arriveText>
+		<sound>fx/Crazy Mike.wav</sound>
+		<postText>Two down, one to go!</postText>
+	</Event>
+	<Event id="eventOspreyBoss3">
+	   <location dist="1" >
+		    <ship>Ring</ship>
+		</location>
+		<arriveText>The third boss!</arriveText>
+		<sound>fx/Bad Mike.wav</sound>
+		<postText>Time to end this!</postText>
+	</Event>
+	<Event id="eventOspreyBoss4">
+	   <location dist="1" >
+		    <ship>Spear</ship>
+		</location>
+		<arriveText>There's a stillness in the air as your crew leaves warp, and then you hear his laugh.</arriveText>
+		<sound>fx/Crazy Mike.wav</sound>
+		<postText>Congratulations, you've beaten Crazy Mike!</postText>
+		<postText>The End</postText>
+	</Event>
+	<!-- ****************************Ship Events**************************** -->
+	<Event id="eventShard">
+		<location dist="10" time="32">
+			<name>New Dawn</name>
+			<ship id="ISV_Shard"></ship>
+		</location>
+	</Event>
+
+	<Event id="eventShardNow">
+		<location>
+			<name>New Dusk</name>
+			<ship id="ISV_Shard"></ship>
+		</location>
+	</Event>
+	<Event id="eventSol">
+		<location dist="10" time="2:02">
+			<name>New Dawn</name>
+			<ship id="HSV_Sol"></ship>
+		</location>
+	</Event>
+
+</Events>

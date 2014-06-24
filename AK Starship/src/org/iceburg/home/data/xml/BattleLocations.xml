@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BattleLocations>
+	<Location>
+	<!-- **************************************************Names-->
+		<name>Unkown Space</name>
+		<name>Uncharted Space</name>
+		<name>Feldorn Space</name>
+		<name>Engar</name>
+		<name>Nish</name>
+		<name>Tel 3</name>
+		<name>Algorand 4</name>
+		<name>Algorand 5</name>
+		<name>Teln</name>
+		<!-- **************************************************Backgrounds 
+		<background>textures/world/star fields/Starfield.jpg</background>
+		<background>textures/world/star fields/Starfield Dull.jpg</background> 
+		<background>textures/world/star fields/Test.jpg</background> -->
+		<background>textures/world/star fields/jpl bg 1.jpg</background>
+		<background>textures/world/star fields/jpl bg 2.jpg</background>
+		<background>textures/world/star fields/jpl bg 3.jpg</background>
+		<background>textures/world/star fields/jpl bg 4.jpg</background>
+		<background>textures/world/star fields/jpl bg 5.jpg</background>
+		<background>textures/world/star fields/jpl bg 6.jpg</background>
+		<background>textures/world/star fields/jpl bg 7.jpg</background>
+		<background>textures/world/star fields/jpl bg 8.jpg</background>
+		<background>textures/world/star fields/jpl bg 9.jpg</background>
+		
+		<!-- **************************************************Overlay1s-->
+		<overlay1>textures/world/star fields close/Big Stars.png</overlay1>
+		<overlay1>textures/world/star fields close/Small Stars.png</overlay1>
+		<!-- **************************************************Stars-->
+		<star>textures/world/stars/SC_A.png</star>
+		<star>textures/world/stars/SC_B.png</star>
+		<star>textures/world/stars/SC_F.png</star>
+		<star>textures/world/stars/SC_G.png</star>
+		<star>textures/world/stars/SC_K.png</star>
+		<star>textures/world/stars/SC_M.png</star>
+		<star>textures/world/stars/SC_O.png</star>
+		<star>textures/world/Empty.png</star>
+		<!-- **************************************************Planets-->
+		<planet>textures/world/planets/ClassA.png</planet>
+		<planet>textures/world/planets/ClassB.png</planet>
+		<planet>textures/world/planets/ClassC.png</planet>
+		<planet>textures/world/planets/ClassD.png</planet>
+		<planet>textures/world/planets/ClassE.png</planet>
+		<planet>textures/world/planets/ClassF.png</planet>
+		<planet>textures/world/planets/ClassG.png</planet>
+		<planet>textures/world/planets/ClassH.png</planet>
+		<planet>textures/world/planets/ClassH2.png</planet>
+		<planet>textures/world/planets/ClassI.png</planet>
+		<planet>textures/world/planets/ClassJ.png</planet>
+		<planet>textures/world/planets/ClassK.png</planet>
+		<planet>textures/world/planets/ClassL.png</planet>
+		<planet>textures/world/planets/ClassM.png</planet>
+		<planet>textures/world/planets/ClassM2.png</planet>
+		<planet>textures/world/planets/ClassN.png</planet>
+		<planet>textures/world/planets/ClassN2.png</planet>
+		<planet>textures/world/planets/ClassO.png</planet>
+		<planet>textures/world/planets/ClassO2.png</planet>
+		<planet>textures/world/planets/ClassP.png</planet>
+		<planet>textures/world/planets/ClassQ.png</planet>
+		<planet>textures/world/planets/ClassR.png</planet>
+		<planet>textures/world/planets/ClassS.png</planet>
+		<planet>textures/world/planets/ClassT.png</planet>
+		<planet>textures/world/planets/ClassX.png</planet>
+		<planet>textures/world/planets/ClassY.png</planet>
+		<planet>textures/world/planets/jpl planet 1.png</planet>
+		<planet>textures/world/planets/jpl planet 2.png</planet>
+		<planet>textures/world/Empty.png</planet>
+		<!-- **************************************************Overlay2s-->
+		<!--<overlay2>textures/world/nebulas/Nebula.png</overlay2>-->
+		<overlay2>textures/world/nebulas/jpl neb 1.png</overlay2>
+		<overlay2>textures/world/nebulas/jpl neb 2.png</overlay2>
+		<overlay2>textures/world/nebulas/jpl neb 3.png</overlay2>
+		<overlay2>textures/world/nebulas/jpl neb 4.png</overlay2>
+		<overlay2>textures/world/Empty.png</overlay2>
+		<!-- **************************************************Songs-->
+		<song>music/Red_Giant.mp3</song>
+		<song>music/AirGlow.mp3</song>
+		<song>music/In_Time.mp3</song>
+		<song>music/Light_Years.mp3</song>
+		<song>music/Ultra_Deep_Field.mp3</song>
+	</Location>
+
+
+</BattleLocations>

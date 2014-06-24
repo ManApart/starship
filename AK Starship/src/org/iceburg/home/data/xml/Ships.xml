@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+A crewman tag adds a random crewman <crewMan></crewMan>
+Specifying tags, you can override any of the following:
+<name>, <division= Command, Engineer, Security, Science >, <base> (increase base stat boost and reroll stats)
+<energyFields>,<navigation>,<analysis>,<powerDistribution>, and <healthTotal> 
+
+-->
+<Ships>
+	<Ship id="test">
+		<title>Test Ship</title>
+		<tileSet>ship_standard</tileSet>
+		<image>textures/world/ship/floorplans/ISV_Sol_P.png</image>
+		<floorPlan>textures/world/ship/floorplans/test.png</floorPlan>
+	</Ship>
+	<Ship id="chelseaMonster">
+		<title>Space Monster</title>
+		<tileSet>chelseaMonster</tileSet>
+		<image>textures/world/ship/floorplans/ChelseaMonster_P.png</image>
+		<floorPlan>textures/world/ship/floorplans/ChelseaMonster.png</floorPlan>
+		<crew></crew>
+		<crew></crew>
+		<crew></crew>
+	</Ship>
+	<Ship id="target">
+		<title>Weapon Target</title>
+		<tileSet>ship_standard</tileSet>
+		<image>textures/world/ship/floorplans/target_P.png</image>
+		<floorPlan>textures/world/ship/floorplans/target_1.png</floorPlan>
+		<crew>
+		    <name>Test Hologram</name>
+		    <division>Engineering</division>
+		</crew>
+	</Ship>
+	<Ship id="jumper">
+		<title>USS Dinghy</title>
+		<crew></crew>
+		<crew>
+		    <name>Phil</name>
+		    <energyFields>6</energyFields>
+		</crew>
+		<tileSet>ship_standard</tileSet>
+		<image>textures/world/ship/floorplans/Jumper_P.png</image>
+		<floorPlan>textures/world/ship/floorplans/Jumper_1.png</floorPlan> 
+	</Ship>
+	<Ship id="HSV_Sol">
+		<title>HSV Sol</title>
+		<crew>
+		    <division>Command</division>
+		</crew>
+		<crew>
+		    <division>Security</division>
+		</crew>
+		<crew>
+		    <division>Engineer</division>
+		</crew>
+		<crew>
+		    <name>Bob</name>
+		    <division>Science</division>
+		    <analysis>5</analysis>
+		</crew>
+		<tileSet>ship_standard</tileSet>
+		<image>textures/world/ship/floorplans/ISV_Sol_P.png</image>
+		<floorPlan>textures/world/ship/floorplans/ISV_Sol_1.png</floorPlan> 
+		<floorPlan>textures/world/ship/floorplans/ISV_Sol_2.png</floorPlan>
+	</Ship>
+	<Ship id="ISV_Shard">
+		<title>ISV Shard</title>
+		<crew></crew>
+		<crew>
+		    <division>Command</division>
+		    <base>5</base>
+		</crew>
+		<image>textures/world/ship/floorplans/ISV_Shard_P.png</image>
+		<tileSet>ISV_Shard</tileSet>
+		<floorPlan>textures/world/ship/floorplans/ISV_Shard_1.png</floorPlan>
+	</Ship>
+	<Ship id="Butterfly">
+		<title>Crystaline Ship</title>
+		<crew></crew>
+		<crew></crew>
+		<crew></crew>
+		<image>textures/world/ship/floorplans/Butterfly_P.png</image>
+		<tileSet>Butterfly</tileSet>
+		<floorPlan>textures/world/ship/floorplans/Butterfly.png</floorPlan>
+	</Ship>
+	<Ship id="Hive">
+		<title>Hive Ship</title>
+		<crew></crew>
+		<crew></crew>
+		<crew></crew>
+		<image>textures/world/ship/floorplans/Hive_P.png</image>
+		<tileSet>Hive</tileSet>
+		<floorPlan>textures/world/ship/floorplans/Hive.png</floorPlan>
+	</Ship>
+	<Ship id="PreyBird">
+		<title>Klin Ship</title>
+		<crew></crew>
+		<crew></crew>
+		<crew></crew>
+		<image>textures/world/ship/floorplans/PreyBird_P.png</image>
+		<tileSet>PreyBird</tileSet>
+		<floorPlan>textures/world/ship/floorplans/PreyBird.png</floorPlan>
+	</Ship>
+	<Ship id="Ring">
+		<title>Ring Fighter</title>
+		<crew></crew>
+		<crew></crew>
+		<crew></crew>
+		<image>textures/world/ship/floorplans/Ring_P.png</image>
+		<tileSet>Ring</tileSet>
+		<floorPlan>textures/world/ship/floorplans/Ring.png</floorPlan>
+	</Ship>
+	<Ship id="Spear">
+		<title>Fleet Fighter</title>
+		<crew></crew>
+		<crew></crew>
+		<crew></crew>
+		<image>textures/world/ship/floorplans/Spear_P.png</image>
+		<tileSet>Spear</tileSet>
+<!-- 		<tileSet>ship_1</tileSet> -->
+		<floorPlan>textures/world/ship/floorplans/Spear.png</floorPlan>
+	</Ship>
+	<Ship id="Voyager">
+		<title>Science Vessel</title>
+		<crew></crew>
+		<crew></crew>
+		<crew></crew>
+		<image>textures/world/ship/floorplans/Voyager_P.png</image>
+		<tileSet>Voyager</tileSet>
+		<floorPlan>textures/world/ship/floorplans/Voyager.png</floorPlan>
+	</Ship>
+</Ships>
+
